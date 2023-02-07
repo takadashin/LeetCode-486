@@ -20,7 +20,7 @@ bool canWindfs(vector<int>& nums,int i,int j, int scoreself, int scoreopp, int& 
         return scoreself + nums[i] >= scoreopp;
 
     bool res = (canWindfs(nums, i + 1, j, scoreopp, scoreself + nums[i], total));
-    res = res && canWindfs(nums, i, j - 1, scoreopp, scoreself + nums[j], total);
+    res = res && canWindfs(nums, i, j - 1, scoreopp, scoreself + nums[j], total); // we check if opponent can lose in the next move to determine if we can win or not
     return  !res;
             
 
